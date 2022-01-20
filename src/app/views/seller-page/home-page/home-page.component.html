@@ -1,0 +1,28 @@
+<div class="header" *ngIf="isLoading"> Loading... </div>
+<div class="header" *ngIf="!isLoading"> {{seller?.name}} </div>
+
+
+<div class="home-cards">
+
+
+    <div class="orders">
+        <div class="content">
+            <h4>Achats</h4>
+            <h2 *ngIf="isLoading">Loading...</h2>
+            <h2 *ngIf="!isLoading">{{seller?.numberOfSells}}</h2>
+        </div>
+
+    </div>
+
+    <div class="money">
+        <div class="content">
+            <h4>Vendu </h4>
+            <h2 *ngIf="isLoading">Loading...</h2>
+            <h2 *ngIf="!isLoading">{{ seller?.howMuchMoneyThisSellerHasSold}} FCFA</h2>
+        </div>
+    </div>
+
+
+
+</div>
+

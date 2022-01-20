@@ -1,0 +1,35 @@
+<div class="header" *ngIf="isLoading"> Loading... </div>
+<div class="header" *ngIf="!isLoading"> {{client?.name}} </div>
+
+
+<div class="home-cards">
+
+
+  <div class="orders">
+      <div class="content">
+          <h4>Achat</h4>
+          <h2 *ngIf="isLoading">Loading...</h2>
+          <h2 *ngIf="!isLoading">{{client?.numberOfBuys}}</h2>
+      </div>
+
+  </div>
+
+  <div class="money">
+      <div class="content">
+          <h4>dépensé</h4>
+          <h2 *ngIf="isLoading">Loading...</h2>
+          <h2 *ngIf="!isLoading">FCFA {{client?.howMuchMoneyThisClientHasSpent}}</h2>
+      </div>
+  </div>
+
+  <div class="wishlist">
+      <div class="content">
+          <h4>favoris</h4>
+          <h2 *ngIf="isLoading">Loading...</h2>
+          <h2 *ngIf="!isLoading">{{client?.productsWished.length}}</h2>
+      </div>
+
+  </div>
+
+</div>
+

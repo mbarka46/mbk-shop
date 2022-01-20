@@ -1,0 +1,9 @@
+<h2 mat-dialog-title> êtes-vous sûr?</h2>
+<mat-dialog-content class="mat-typography">
+    <h3>voulez-vous qu'on procède? </h3>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Annuler</button>
+    <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Oui</button>
+</mat-dialog-actions>

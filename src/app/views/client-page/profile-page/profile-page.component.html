@@ -1,0 +1,31 @@
+
+
+
+<div class="box">
+
+    <h2>Modifier votre profile</h2>
+    <form [formGroup]="formGroup" (ngSubmit)="update()">
+
+        <mat-form-field appearance="fill" class="input">
+            <mat-label>Nom</mat-label>
+            <input matInput required formControlName="name">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Email </mat-label>
+            <input matInput type="email" formControlName="email" required [email]="true">
+        </mat-form-field>
+
+
+        <mat-form-field appearance="fill">
+            <mat-label>Entre votre mot de passe</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+<mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+</button>
+        </mat-form-field>
+
+        <button [disabled]="!formGroup.valid" mat-raised-button class="btn-success">Modifier</button>
+    </form>
+
+</div>
